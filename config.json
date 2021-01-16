@@ -1,0 +1,6 @@
+{
+    "logPath" : "./server.log",
+    "port" : 5002,
+    "dbuser": "laserv-pw",
+    "dbpass": "maybenotasecureone!"
+}
