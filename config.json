@@ -1,6 +1,8 @@
 {
     "logPath" : "./server.log",
-    "port" : 5002,
+    "port" : 5000,
     "dbuser": "laserv-pw",
-    "dbpass": "maybenotasecureone!"
+    "dbpass": "maybenotasecureone",
+    "dbconnstr": "mongodb+srv://imagecluster0.ko1nj.mongodb.net/storage?authSource=%24external&authMechanism=MONGODB-X509&retryWrites=true&w=majority",
+    "dbcert": "X509-cert-2778982789925497865.pem"
 }

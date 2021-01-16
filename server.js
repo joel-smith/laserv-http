@@ -1,4 +1,4 @@
-//File: index.js
+//File: server.js
 //Date: Jan 15, 2020
 //Author: joelcs
 //Desc: a simple http web server written in node.js
@@ -8,9 +8,10 @@
 const http = require('http');
 const path = require('path');
 const fs = require('fs');
+const Img = require('./image');
 
 //for database access
-const mongoClient = require('mongodb');
+const MongoClient = require('mongodb').MongoClient;
 
 const Logger = require('./logger');
 
@@ -22,8 +23,6 @@ var configObj = require('./config.json');
     //console logging is okay for now
    logger.on('message', (data) => console.log('Called logger',data));
    //logger.on('message', (data) => fs.appendFile(path.join(__dirname, 'loglog.log')), data);
-
-   logger.log('log log log')
 
 //declare our server
 const server = http.createServer((quest, ponse) => {
@@ -100,3 +99,7 @@ const server = http.createServer((quest, ponse) => {
 const PORT = configObj.port || process.env.PORT;
 
 server.listen(PORT, () => console.log(`server running on port ${PORT}`));
+
+var testImg = new Img("test2.jpg");
+
+testImg.create().catch(console.error);
